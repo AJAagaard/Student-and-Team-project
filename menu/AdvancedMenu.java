@@ -110,7 +110,6 @@ public class AdvancedMenu {
             if (teams[i].getName().equals(teamName)) {
                 System.out.println("Team navn: " + teams[i].getName() + "  Lokale: " + teams[i].getRoom());
                 printArray(teams[i].getStudentsInfoForMenu());
-                System.out.println();
             }
         }
         System.out.println("Continue?");
@@ -122,6 +121,7 @@ public class AdvancedMenu {
         for (int i = 0; i < nrOfTeams; i++) {
             System.out.println("Team navn: " + teams[i].getName() + "  Lokale: " + teams[i].getRoom());
             printArray(teams[i].getStudentsInfoForMenu());
+            System.out.println();
         }
         System.out.println("Continue?");
         String done = input.next();
