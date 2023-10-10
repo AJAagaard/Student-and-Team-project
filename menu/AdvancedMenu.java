@@ -95,7 +95,7 @@ public class AdvancedMenu {
         String studentName = input.next();
         for (int i = 0; i < nrOfStudents; i++) {
             if (students[i].getName().equals(studentName)) {
-                System.out.println("Name: " + students[i].getName() + ". Average grade: " + students[i].getAverageGrade());
+                System.out.println("Name: " + students[i].getName() + "   Average grade: " + students[i].getAverageGrade());
             }
         }
         System.out.println("Continue?");
@@ -108,7 +108,9 @@ public class AdvancedMenu {
         String teamName = input.next();
         for (int i = 0; i < nrOfTeams; i++) {
             if (teams[i].getName().equals(teamName)) {
+                System.out.println("Team navn: " + teams[i].getName() + "  Lokale: " + teams[i].getRoom());
                 printArray(teams[i].getStudentsInfoForMenu());
+                System.out.println();
             }
         }
         System.out.println("Continue?");
@@ -118,6 +120,7 @@ public class AdvancedMenu {
     private static void showAllInfo() {
         Scanner input = new Scanner(System.in);
         for (int i = 0; i < nrOfTeams; i++) {
+            System.out.println("Team navn: " + teams[i].getName() + "  Lokale: " + teams[i].getRoom());
             printArray(teams[i].getStudentsInfoForMenu());
         }
         System.out.println("Continue?");

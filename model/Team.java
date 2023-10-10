@@ -84,7 +84,7 @@ public class Team {
     public Student[] highScoreStudents(double minAverage) {
         Student[] achievedMinAverage = new Student[this.nrOfStudents];
         int j = 0;
-        for (int i = 0; i < this.students.length; i++) {
+        for (int i = 0; i < this.nrOfStudents; i++) {
             if (this.students[i].isActive() && this.students[i].getAverageGrade() > minAverage) {
                 achievedMinAverage[j] = this.students[i];
                 j++;
@@ -101,7 +101,8 @@ public class Team {
         }
         return studentsInfo;
     }
-    /*I eksemplet har alle de studerende et navn på 4 chars, så jeg ved ikke, om det er formatteret korrekt*/
+    /*I eksemplet i opgaven har alle de studerende et navn på 4 chars, så vi er ikke helt sikre på, om du leder efter
+    * et printf statement til opgaven, eller det "bare" var en tilfældighed. Man kunne bruge printf her. */
 
     public int[] correctAnswersPerQuestion() {
         int[] correctAnswersPerQuestion = new int[10];
